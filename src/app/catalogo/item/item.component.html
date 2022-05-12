@@ -1,0 +1,16 @@
+<mat-card class="card-item">
+   <mat-card-title-group>
+    <mat-card-title>{{detailCharacter.name}}</mat-card-title>
+    <mat-card-subtitle>{{detailCharacter.status}}</mat-card-subtitle>
+    <img (click)="getDetailCharacter(detailCharacter.id)" mat-card-sm-image [src]="detailCharacter.image" >
+  </mat-card-title-group>
+  <mat-card-content>
+    <p>status: {{detailCharacter.status}}</p>
+    <p>Especie: {{detailCharacter.species}}</p>
+    <p *ngIf="episode.length !== 0">Primer episodio: {{episode.name}}</p>
+    <p>Ubicación: {{detailCharacter.location.name}}</p>
+  </mat-card-content>
+  <mat-card-actions fxLayout="column">
+    <button mat-button (click)="openLastUbication(detailCharacter.location)">Ultima ubicación</button>
+  </mat-card-actions>
+</mat-card>

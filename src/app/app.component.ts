@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  value = 'Buscar personaje';
   title = 'catalogo';
+  showSearch = false;
+
+
 }

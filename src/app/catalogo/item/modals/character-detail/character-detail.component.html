@@ -1,0 +1,10 @@
+<div *ngIf="characterDetail.length !== 0">
+  <img #imageDetail class="character-image" [src]="characterDetail.image" alt="characterDetail.name">
+  <mat-progress-bar *ngIf="characterDetail.length !== 0 && this.widthExp == 0" mode="indeterminate" style="display: flex;margin: -6px 0 10px;"></mat-progress-bar>
+  <div *ngIf="this.widthExp !== 0" [ngStyle]="{'max-width.px': widthExp}">
+    <h1>{{characterDetail.name}}</h1>
+    <sub>{{characterDetail.species}} | {{characterDetail.gender}} | {{characterDetail.status}}</sub>
+    <br><br>
+    <p>Ubicación: {{characterDetail.location.name}}}</p>
+  </div>
+</div>
